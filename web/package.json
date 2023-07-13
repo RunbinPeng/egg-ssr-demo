@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build-client:dev": "cross-env ENV=development webpack --config webpack-client.config.js --watch",
+    "build-client": "cross-env ENV=production webpack --config webpack-client.config.js",
+    "build-server:dev": "cross-env ENV=development webpack --config webpack-server.config.js --watch",
+    "build-server": "cross-env ENV=production webpack --config webpack-server.config.js",
+    "build": "cross-env ENV=development webpack --config webpack.app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "vue": "^2.7.14",
+    "vue-router": "^3.6.5",
+    "vue-server-renderer": "^2.7.14",
+    "vuex": "^3.6.2",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.5.3",
+    "vue-loader": "^15.2.2",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
